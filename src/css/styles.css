@@ -1,0 +1,248 @@
+@font-face {
+  font-family: "Chronicles_font";
+  src: url("../../assets/fonts/Chronicles_font.ttf");
+  font-style: normal; }
+* {
+  padding: 0;
+  margin: 0; }
+
+body {
+  background-color: #d9c7b6; }
+
+header {
+  font-size: 15px;
+  padding: 20px 0 0 10px; }
+
+header h3 {
+  padding-top: 10px;
+  font-size: 30px;
+  color: #662202; }
+  header h3 span {
+    text-decoration: line-through; }
+
+footer {
+  position: absolute;
+  bottom: 0;
+  padding-bottom: 10px;
+  -moz-tab-size: 20px;
+    -o-tab-size: 20px;
+       tab-size: 20px;
+  width: 75%;
+  text-align: right; }
+
+.wrapper {
+  font-family: "Chronicles_font", Courier, monospace;
+  min-height: 100vh;
+  background-image: url("../img/witcher.png");
+  background-position: right bottom;
+  background-repeat: no-repeat;
+  background-size: 440px 326px;
+  position: relative; }
+
+#gameContainer {
+  position: absolute;
+  left: 50%;
+  top: 500px;
+  -webkit-transform: translate(-60%, -55%);
+          transform: translate(-60%, -55%);
+  height: 600px;
+  width: 900px;
+  background-color: #925438;
+  border: gold 1px solid;
+  border-radius: 7px;
+  -webkit-box-shadow: 0px 0px 22px 10px rgba(255, 215, 0, 0.2);
+          box-shadow: 0px 0px 22px 10px rgba(255, 215, 0, 0.2); }
+
+.coin {
+  margin: 10px 30px;
+  -webkit-perspective: 2000px;
+          perspective: 2000px;
+  width: 90px;
+  height: 90px; }
+
+.coin img {
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  position: absolute;
+  display: block; }
+
+.front {
+  -webkit-animation: front-rotation 5s infinite;
+          animation: front-rotation 5s infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear; }
+
+.back {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+  -webkit-animation: back-rotation 5s infinite;
+          animation: back-rotation 5s infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear; }
+
+@-webkit-keyframes front-rotation {
+  from {
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg); }
+  to {
+    -webkit-transform: rotateY(360deg);
+            transform: rotateY(360deg); } }
+
+@keyframes front-rotation {
+  from {
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg); }
+  to {
+    -webkit-transform: rotateY(360deg);
+            transform: rotateY(360deg); } }
+@-webkit-keyframes back-rotation {
+  from {
+    -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg); }
+  to {
+    -webkit-transform: rotateY(540deg);
+            transform: rotateY(540deg); } }
+@keyframes back-rotation {
+  from {
+    -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg); }
+  to {
+    -webkit-transform: rotateY(540deg);
+            transform: rotateY(540deg); } }
+.amount {
+  position: absolute;
+  text-align: center;
+  max-width: 20%;
+  top: 0;
+  right: 0;
+  color: gold; }
+
+.amount p {
+  font-size: 22px; }
+
+.amount span {
+  font-size: 30px; }
+
+.staking {
+  position: relative;
+  left: 5%;
+  max-width: 70%;
+  top: 5%;
+  height: 30%;
+  padding: 15px 10px 0; }
+
+.staking input {
+  font-family: "Chronicles_font", Courier, monospace;
+  background-color: #dfca9c;
+  border: none;
+  border-radius: 7px;
+  height: 45px;
+  width: 300px;
+  position: absolute;
+  outline: 0;
+  padding-left: 10px;
+  font-size: 30px;
+  -webkit-box-shadow: 0px 0px 5px 5px rgba(102, 34, 2, 0.2);
+          box-shadow: 0px 0px 5px 5px rgba(102, 34, 2, 0.2); }
+
+.error {
+  border-radius: 7px;
+  position: absolute;
+  padding: 0 5px;
+  border-radius: 7px;
+  background-color: brown;
+  color: #dfca9c;
+  max-height: 25px;
+  top: 55px;
+  left: 30px;
+  font-size: 12px;
+  text-align: left;
+  line-height: 24px; }
+
+.staking div {
+  height: 45px;
+  width: auto; }
+
+.staking span.placeholder {
+  top: -5px;
+  padding-left: 10px;
+  color: gold;
+  font-size: 40;
+  position: absolute; }
+
+.staking select {
+  -webkit-box-shadow: 0px 0px 5px 5px rgba(102, 34, 2, 0.2);
+          box-shadow: 0px 0px 5px 5px rgba(102, 34, 2, 0.2);
+  padding-left: 10px;
+  background-color: #dfca9c;
+  outline: 0;
+  position: absolute;
+  left: 350px;
+  height: 45px;
+  width: 100px;
+  border-radius: 7px;
+  font-size: 30px;
+  font-family: "Chronicles_font", Courier, monospace; }
+
+.staking button {
+  color: gold;
+  margin-top: 30px;
+  height: 60px;
+  width: 440px;
+  border-radius: 7px;
+  outline: none;
+  border: none;
+  font-family: "Chronicles_font", Courier, monospace;
+  font-size: 40px;
+  background-color: #662202;
+  -webkit-box-shadow: 0px 0px 5px 5px rgba(255, 215, 0, 0.2);
+          box-shadow: 0px 0px 5px 5px rgba(255, 215, 0, 0.2);
+  cursor: pointer; }
+
+.staking button:disabled {
+  cursor: not-allowed;
+  -webkit-box-shadow: none;
+          box-shadow: none; }
+
+table {
+  display: block;
+  position: absolute;
+  left: 5%;
+  top: 40%;
+  max-height: 270px;
+  width: 90%;
+  font-size: 18px;
+  border-radius: 7px;
+  background-color: #ca9379;
+  text-align: left;
+  border-spacing: 0;
+  overflow: auto; }
+
+th,
+td {
+  padding-left: 10px;
+  height: 50px; }
+
+th:not(:last-child),
+td:not(:last-child) {
+  border-right: #925438 1px solid; }
+
+th {
+  border-bottom: #925438 2px solid; }
+
+td {
+  border-bottom: #925438 0.5px solid; }
+
+th:nth-child(1),
+td:nth-child(1) {
+  width: 20%; }
+
+th:nth-child(2),
+td:nth-child(2) {
+  width: 20%; }
+
+th:nth-child(3),
+td:nth-child(3) {
+  width: 25%; }
